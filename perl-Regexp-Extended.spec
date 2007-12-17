@@ -11,7 +11,6 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Regexp/%{real_name}-%{ver
 BuildRequires:	perl-devel
 BuildRequires:	perl(Clone)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Rexexp::Extended is a simple wrapper arround the perl rexexp
