@@ -3,7 +3,7 @@
 Summary:	Regexp::Extended - Perl wrapper that extends the re module with new features
 Name:		perl-%{real_name}
 Version:	0.01
-Release: %mkrel 3
+Release: %mkrel 5
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{real_name}
