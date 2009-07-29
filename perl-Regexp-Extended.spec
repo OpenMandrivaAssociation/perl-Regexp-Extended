@@ -1,17 +1,19 @@
-%define real_name Regexp-Extended
+%define upstream_name    Regexp-Extended
+%define upstream_version 0.01
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	Regexp::Extended - Perl wrapper that extends the re module with new features
-Name:		perl-%{real_name}
-Version:	0.01
-Release: %mkrel 6
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Regexp/%{real_name}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Regexp/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl(Clone)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Rexexp::Extended is a simple wrapper arround the perl rexexp
@@ -20,7 +22,7 @@ expressions and substitute known operators with an equivalent perl
 re.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +46,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Regexp/Extended/*
 %{perl_vendorlib}/Regexp/Extended.pm
 %{_mandir}/*/*
-
