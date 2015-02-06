@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	4
 
 Summary:	Regexp::Extended - Perl wrapper that extends the re module with new features
 License:	GPL+ or Artistic
