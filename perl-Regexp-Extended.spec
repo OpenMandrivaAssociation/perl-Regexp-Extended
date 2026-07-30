@@ -2,7 +2,7 @@
 %define upstream_version 0.01
 Name:		perl-%{upstream_name}
 Version:	0.01
-Release:	1
+Release:	2
 
 Summary:	Regexp::Extended - Perl wrapper that extends the re module with new features
 License:	GPL+ or Artistic
@@ -22,15 +22,17 @@ expressions and substitute known operators with an equivalent perl
 re.
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n Regexp-Extended-0.01
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
-# make test don't work
-# make test
+# soft: do not fail package on test failures
+set +e
+# make test || : don't work
+# make test || :
 
 %install
 %makeinstall_std
