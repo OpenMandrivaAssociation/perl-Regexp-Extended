@@ -2,7 +2,7 @@
 %define upstream_version 0.01
 Name:		perl-%{upstream_name}
 Version:	0.01
-Release:	2
+Release:	3
 
 Summary:	Regexp::Extended - Perl wrapper that extends the re module with new features
 License:	GPL+ or Artistic
